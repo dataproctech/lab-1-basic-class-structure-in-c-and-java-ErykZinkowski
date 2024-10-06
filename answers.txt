@@ -1,0 +1,14 @@
+1. Dlaczego ważne jest używanie specyfikatorów dostępu private dla atrybutów?
+Dzięki temu ukrywamy wewnętrzne szczegóły implementacji klasy i zapobiegamy bezpośredniemu dostępowi do danych obiektu spoza klasy. 
+Pozwala to lepiej kontrolować sposób, w jaki dane są modyfikowane i chronić je przed niechcianymi zmianami.
+Publiczny dostęp do atrybutów zwiększa ryzyko, że ktoś nieumyślnie zmodyfikuje dane w sposób, który spowoduje błędy lub naruszy spójność stanu obiektu.
+Jeśli implementacja atrybutów jest ukryta, można ją zmieniać bez wpływu na inne części programu, o ile interfejs publiczny pozostaje niezmieniony.
+
+2. Co się stanie, jeśli zmienisz specyfikator dostępu atrybutów na public? Spróbuj to zrobić i zaobserwuj zmiany.
+Każdy kod spoza klasy będzie miał bezpośredni dostęp do tych atrybutów, co oznacza, że programista może je modyfikować bezpośrednio, omijając wszelkie zasady weryfikacji czy walidacji.
+Możliwość kontroli nad wartościami przechowywanymi w atrybutach zostaje znacznie zmniejszona. Jeśli ktoś ustawi nieprawidłowe wartości, może to prowadzić do błędów i problemów.
+Wartości atrybutów mogą być zmieniane w sposób nieprzewidywalny, co może naruszyć spójność danych obiektów.
+
+3. Czy możesz utworzyć wiele obiektów klasy Car? Jeśli tak, jak każdy obiekt przechowuje swoje własne atrybuty?
+Tak, można utworzyć wiele obiektów tej samej klasy, np. Car. Każdy obiekt przechowuje swoje własne atrybuty, ponieważ każda instancja klasy ma swoją własną kopię pól (atrybutów).
+Innymi słowy, każde utworzenie nowego obiektu klasy Car tworzy odrębną przestrzeń w pamięci dla jego atrybutów, które mogą przechowywać różne wartości.
